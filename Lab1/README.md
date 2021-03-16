@@ -8,7 +8,7 @@ Kako bi zaštitili laptope, vanjske diskove, USB memorije od posljedica krađe, 
 
 ## Postupak probijanja Bitlocker lozinke
 
-Probijanje lozinke se sastoji od dva dijela: izvlačenje hash sadržaja iz sigurnosne kopije UBS-a koji je zaštićen lozinkom te stvarnog napada. Sačuvajte na računalu sliku USB-a koji se nalazi na [OneDrive-u](https://www.openwall.com/john/).
+Probijanje lozinke se sastoji od dva dijela: izvlačenje hash sadržaja iz sigurnosne kopije UBS-a koji je zaštićen lozinkom te stvarnog napada. Sačuvajte na računalu sliku USB-a koji se nalazi na [OneDrive-u](https://fesb-my.sharepoint.com/:u:/g/personal/toperkov_fesb_hr/ERP3tpm9FRRIkk82lCHbQpIBGu-9efbxohQv6dZ6g2B2AQ?e=vmHmwi).
 
 ### Izvlačenje hash vrijednosti - [John the Ripper](https://www.openwall.com/john/)
 
