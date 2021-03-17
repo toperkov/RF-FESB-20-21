@@ -77,9 +77,21 @@ hash("PrezimeIme" + "SALT") = f3f496e59923ea2f120edbe0b603fac4719bb01e250e9534e4
 ```
 gdje je za `SALT` korištena BitLocker lozinka.
 > **NAPOMENA:**  
-> Ime studenta formatirano je kao: `<Prezime><Ime>`. Primjetite kako nema razmaka između prezimena i imena, te da nisu korištena dijakritička slova (čćžšđ), te nema posebnih znakova (npr. -).
+> Ime studenta formatirano je kao: `PrezimeIme`. Primjetite kako nema razmaka između prezimena i imena, te da nisu korištena dijakritička slova (čćžšđ), te nema posebnih znakova (npr. '-' između dva prezimena).
 
 Vaš zadatak je saznati datoteku koja pripada studentu, dok je njezin sadržaj rješenje ove vježbe.
+
+Ime vlastite datoteke možete saznati izvršavanjem sljedećeg koda u `python shell`-u:
+
+```python
+>>> from cryptography.hazmat.primitives import hashes
+>>> from cryptography.hazmat.backends import default_backend
+>>> imeStudenta = "PrezimeIme" + "SALT" # NAPOMENA: SALT je BitLocker lozinka
+>>> digest = hashes.Hash(hashes.SHA256(), backend=default_backend())
+>>> digest.update(str.encode(imeStudenta))
+>>> filename = digest.finalize().hex()
+>>> print(filename)
+```
 
 > **EDIT:**  
 > Korištenjem Google Cloud infrastrukture pokušajte ponoviti probijanje lozinke upotrebom [Cloudtopolis](https://github.com/JoelGMSec/Cloudtopolis) alata te usporedite vrijeme potrebno za doznavanje lozinke u odnosnu sa vrijeme na računalu.
