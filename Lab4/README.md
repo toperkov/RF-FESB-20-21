@@ -73,4 +73,4 @@ if __name__ == "__main__":
         print("File extension not supported/recognized... Make sure the file has the correct extension...")
 ```
 
-Python skriptu pozivate `python <script_name> -p <file>`, gdje je `<script_name>` ime `.py` skripte, a `<file>` ime PDF ili JPG datoteke
+Python skriptu pozivate `python <script_name> -f <file>`, gdje je `<script_name>` ime `.py` skripte, a `<file>` ime PDF ili JPG datoteke
