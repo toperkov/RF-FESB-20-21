@@ -55,7 +55,7 @@ def pdfMetaData(file_path):
 
 
 if __name__ == "__main__":
-    parser = optparse.OptionParser("Usage: python <script_name> -p <file>")
+    parser = optparse.OptionParser("Usage: python <script_name> -f <file>")
     parser.add_option("-f", dest="file", type="string", help="please provide full path to the document")
 
     (options, args) = parser.parse_args()
